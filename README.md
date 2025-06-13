@@ -1,28 +1,30 @@
 # Construction Data and AI Services Website
 
-This repository contains a minimal Python-based website with a lightweight CMS designed for showcasing consultancy services in the construction industry.
+This repository contains a simple static website suitable for hosting on GitHub Pages. It showcases consultancy services for the construction industry with example case studies.
 
-## Features
+## Structure
 
-- Responsive design using basic HTML and CSS
-- Admin login with ability to create, edit and delete posts (case studies/insights)
-- Contact form
-- Content stored in a local SQLite database
+- `index.html` – homepage listing recent posts
+- `services.html` – overview of services offered
+- `case-studies.html` – page displaying posts from `data/posts.json`
+- `contact.html` – contact details
+- `data/posts.json` – edit this file to manage case study/insight entries
+- `static/` – CSS and JavaScript assets
 
-## Running the site
+## Running locally
 
-1. Ensure Python 3 is installed.
-2. Run the server:
+Open `index.html` in your browser. If you prefer a local server, you can run:
 
 ```bash
-python3 server.py
+python3 -m http.server
 ```
 
-The site will be available at `http://localhost:8000`.
+and navigate to `http://localhost:8000`.
 
-- Access the admin area at `http://localhost:8000/admin`.
-- Default credentials: **admin / admin**
+## Deploying to GitHub Pages
 
-## Notes
+1. Commit your changes to the repository.
+2. In the repository settings on GitHub, enable **GitHub Pages** and select the `main` branch as the source.
+3. The site will be served from `https://<username>.github.io/<repository>/`.
 
-This is a simplified CMS using only Python standard library modules to avoid external dependencies. It is intended as a demonstration and starting point. For a production deployment, consider a full-featured platform such as WordPress or a hosted CMS with proper security and scalability measures.
+No additional build step is required.
